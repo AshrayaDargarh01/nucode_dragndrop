@@ -121,7 +121,7 @@ export default () => {
         className="dndnode output"
         onDragStart={(event) =>
           onDragStart(event, {
-            type: "",
+            type: "arrayDataTypes",
             datatype: "array",
             options: [1, 2, 3, 4],
           })

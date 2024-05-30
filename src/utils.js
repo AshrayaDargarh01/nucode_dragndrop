@@ -23,3 +23,23 @@ export const getFlowData=()=>{
         return null;
     }
 }
+
+export const setSolArrayFormValues=(data)=>{
+    console.log('Saving data',data)
+    localStorage.setItem("solArrayFormValues",JSON.stringify(data));
+}
+
+export const getSolArrayFormValues=()=>{
+    const isData=localStorage.getItem("solArrayFormValues");
+    if(!isData)
+    {
+        return null;
+    }
+    try {
+        const data=JSON.parse(isData);
+        return data;
+    } catch (error) {
+        console.error("Something went wrong:", error);
+        return null;
+    }
+}
